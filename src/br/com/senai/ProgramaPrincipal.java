@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class ProgramaPrincipal {
 
 	public static void main(String[] args) {
+		int valor = 0;
 		
 		Scanner tec = new Scanner(System.in);
-		String opcao = "s";
+		String continuar = "s";
 		int opcaoDoMenu;
 		
 		do {
@@ -15,15 +16,16 @@ public class ProgramaPrincipal {
 			System.out.println("1) Tabuada");
 			System.out.println("2) Sequencia de valores");
 			System.out.println("9) Sair");
-			System.out.println("------------");
-			System.out.print("Informe o opção desejada: ");
+			System.out.println("-------------------------------");
+			System.out.println("Informe o opção desejada: ");
+			System.out.println("-------------------------------");
 			opcaoDoMenu = tec.nextInt();
 			
 			
 			switch (opcaoDoMenu) {
 			case 1:
 				System.out.println("--- TABUADA ---");
-				int valor;
+				
 				int multiplicador = 0;
 				
 				System.out.print("Informe um valor inteiro: ");
@@ -56,18 +58,22 @@ public class ProgramaPrincipal {
 		}
 				break;
 				
-			case 9:
-				opcao = "n";
-				break;
+			
 				
 			default:
 				System.out.println("opção invalida.");
 				break;
 				}
-			} while (opcao.equalsIgnoreCase("s"));
-			
+			System.out.println("-------------------------------");
+			System.out.println("Deseja continuar?");
+			System.out.println("-------------------------------");
+			continuar = tec.next();
+			} while (continuar.equalsIgnoreCase("s"));
+			System.out.println("**************************");
 			System.out.println("Sistema Finalizado");
+			System.out.println("**************************");
 	}
 
-}	
 	
+	}
+
